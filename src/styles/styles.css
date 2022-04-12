@@ -26,3 +26,10 @@
 
 .option {
 }
+
+.bottomBar {
+  background-color: #194872;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
