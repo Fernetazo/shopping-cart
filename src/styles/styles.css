@@ -1,0 +1,28 @@
+.material-icons {
+  font-family: "Material Icons";
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  min-height: 40px;
+  justify-content: space-around;
+}
+
+.mainTitle {
+  min-width: 500px;
+  font-size: 30px;
+}
+
+.navigationOptions {
+  display: flex;
+  flex-direction: row;
+  min-width: 250px;
+  min-height: 40px;
+  justify-content: space-around;
+  background-color: #194872;
+  color: white;
+}
+
+.option {
+}

@@ -1,7 +1,13 @@
 function NavBar() {
   return (
-    <div>
-      <div className="navBar">This is NavBar</div>
+    <div className="navBar">
+      <div className="mainTitle">Androidz</div>
+      <div className="navigationOptions">
+        <div className="option">Home</div>
+        <div className="option">Shop</div>
+        <div className="option">About</div>
+        <div className="material-icons">shopping_cart</div>
+      </div>
     </div>
   );
 }

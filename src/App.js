@@ -1,6 +1,7 @@
 import NavBar from "./Components/NavBar";
 import Welcome from "./Components/Welcome";
 import BottomBar from "./Components/BottomBar";
+import "./styles/styles.css";
 
 function App() {
   return (
