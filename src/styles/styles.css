@@ -1,3 +1,7 @@
+body {
+  font-family: sans-serif;
+}
+
 .material-icons {
   font-family: "Material Icons";
 }
@@ -47,12 +51,11 @@ a:active > .option {
 .cardsGrid {
   display: grid;
   width: 1000px;
-  height: 1000px;
   grid-template-columns: repeat(3, 250px);
   grid-template-rows: repeat(3, 450px);
   column-gap: 40px;
   row-gap: 40px;
-  border: solid 1px red;
+  background-color: #ededed;
 }
 
 .cardContainer {
@@ -62,30 +65,41 @@ a:active > .option {
   width: 250px;
   height: 450px;
   border: solid 0.5px grey;
+  border-radius: 2%;
+  background-color: white;
 }
 
 .cardUpperSide {
   border-bottom: solid 0.25px grey;
 }
 
-.cardBottomSide {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
 .imageContainer {
   width: 250px;
-  height: 200px;
+  height: 280px;
 }
 
 .cardImage {
-  max-width: 250px;
-  max-height: 200px;
+  width: 250px;
+  height: 280px;
+}
+
+.cardBottomSide {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 .price {
-  font-size: 20px;
+  height: 40%;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.description {
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .bottomBar {
