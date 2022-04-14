@@ -1,12 +1,22 @@
+import { Link } from "react-router-dom";
+
 function NavBar() {
   return (
     <div className="navBar">
       <div className="mainTitle">Androidz</div>
       <div className="navigationOptions">
-        <div className="option">Home</div>
-        <div className="option">Shop</div>
-        <div className="option">About</div>
-        <div className="material-icons">shopping_cart</div>
+        <Link to="/">
+          <div className="option">Home</div>
+        </Link>
+        <Link to="/shop">
+          <div className="option">Shop</div>
+        </Link>
+        <Link to="/about">
+          <div className="option">About</div>
+        </Link>
+        <Link to="/cart">
+          <div className="option material-icons">shopping_cart</div>
+        </Link>
       </div>
     </div>
   );
