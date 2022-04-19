@@ -3,9 +3,22 @@ import uniqid from "uniqid";
 
 const Card = (props) => {
   const e = props.card;
+
+  const manageAddItemToCart = () => {
+    let id = e.id;
+    let name = e.name;
+    let price = e.price;
+    let description = e.description;
+
+    let item = { id, name, price, description };
+  };
+
   return (
     <div className="cardContainer">
       <div className="cardUpperSide">
+        <button className="addToCartButton" onClick={manageAddItemToCart}>
+          add_shopping_cart
+        </button>
         <div className="imageContainer" id={e.id} key={e.id} name={e.name}>
           <img
             className="cardImage"
@@ -16,7 +29,7 @@ const Card = (props) => {
         </div>
       </div>
       <div className="cardBottomSide">
-        <div className="price">${e.price}</div>
+        <div className="price">${new Intl.NumberFormat().format(e.price)}</div>
         <div className="description">{e.description}</div>
       </div>
     </div>

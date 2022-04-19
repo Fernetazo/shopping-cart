@@ -29,7 +29,6 @@ body {
 a {
   background-color: rgb(220, 220, 220);
   color: black;
-  text-decoration: none;
 }
 a:hover {
   background-color: #194872;
@@ -62,25 +61,43 @@ a:active > .option {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: 250px;
-  height: 450px;
-  border: solid 0.5px grey;
-  border-radius: 2%;
+  width: 245px;
+  height: 445px;
+  box-shadow: 2px 1px 1px gray;
+  border-radius: 10px 5px;
   background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardContainer:hover {
+  box-shadow: 4px 4px 4px 4px gray;
+}
+
+.cardContainer:hover .addToCartButton {
+  visibility: visible;
 }
 
 .cardUpperSide {
   border-bottom: solid 0.25px grey;
 }
 
+.addToCartButton {
+  visibility: hidden;
+  font-family: "Material Icons";
+  position: relative;
+  top: 15px;
+  left: 200px;
+}
+
 .imageContainer {
-  width: 250px;
-  height: 280px;
+  width: 245px;
+  height: 275px;
 }
 
 .cardImage {
-  width: 250px;
-  height: 280px;
+  width: 245px;
+  height: 275px;
+  border-radius: 10px 5px;
 }
 
 .cardBottomSide {
@@ -97,7 +114,7 @@ a:active > .option {
 }
 
 .description {
-  font-size: 14px;
+  font-size: 13px;
   margin-left: 20px;
   margin-right: 20px;
 }

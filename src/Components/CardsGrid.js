@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import uniqid from "uniqid";
 import Card from "./Card";
 
-import alphamini from "./images/alphamini.jpg";
-import cate from "./images/cate.jpg";
-import cleaner from "./images/cleaner.jpg";
-import cyx5 from "./images/cyx5.jpg";
-import deli from "./images/deli.jpg";
-import drawer from "./images/drawer.jpg";
-import go1 from "./images/go1.jpg";
-import if3129 from "./images/if3129.png";
-import jedi from "./images/jedi.png";
-import padbotx1s from "./images/padbotx1s.png";
-import pepper from "./images/pepper.png";
-import reeman from "./images/reeman.jpg";
-import spider from "./images/spider.jpg";
-import stemk12 from "./images/stemk12.png";
-import tonybot from "./images/tonybot.png";
-import vacuum from "./images/vacuum.jpeg";
+import alphamini from "../images/alphamini.jpg";
+import cate from "../images/cate.jpg";
+import cleaner from "../images/cleaner.jpg";
+import cyx5 from "../images/cyx5.jpg";
+import deli from "../images/deli.jpg";
+import drawer from "../images/drawer.jpg";
+import go1 from "../images/go1.jpg";
+import if3129 from "../images/if3129.png";
+import jedi from "../images/jedi.png";
+import padbotx1s from "../images/padbotx1s.png";
+import pepper from "../images/pepper.png";
+import reeman from "../images/reeman.jpg";
+import spider from "../images/spider.jpg";
+import stemk12 from "../images/stemk12.png";
+import tonybot from "../images/tonybot.png";
+import vacuum from "../images/vacuum.jpeg";
 
 const Cards = () => {
   const [cards, setCards] = useState([
