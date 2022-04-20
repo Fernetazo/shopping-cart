@@ -6,16 +6,23 @@ import Cart from "./Cart";
 
 // If was 'Routes' it will conflict with react router dom 'Routes' import => so 'routes'
 const routes = (props) => {
-  const { cart, addItemToCart } = props;
+  const { cards, cart, addItemToCart } = props;
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route
         path="/shop"
-        element={<Shop cart={cart} addItemToCart={addItemToCart} />}
+        element={
+          <Shop cards={cards} cart={cart} addItemToCart={addItemToCart} />
+        }
       />
       <Route path="/about" element={<About />} />
-      <Route path="/cart" element={<Cart />} />
+      <Route
+        path="/cart"
+        element={
+          <Cart cards={cards} cart={cart} addItemToCart={addItemToCart} />
+        }
+      />
     </Routes>
   );
 };

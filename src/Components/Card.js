@@ -19,7 +19,10 @@ const Card = (props) => {
   return (
     <div className="cardContainer">
       <div className="cardUpperSide">
-        <button className="addToCartButton" onClick={manageAddItemToCart}>
+        <button
+          className="addToCartButton material-icons"
+          onClick={manageAddItemToCart}
+        >
           add_shopping_cart
         </button>
         <div

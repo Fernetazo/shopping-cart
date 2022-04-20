@@ -1,9 +1,15 @@
 import CardsGrid from "./CardsGrid";
 
 function Shop(props) {
-  const { cart, addItemToCart } = props;
+  const { cards, cart, addItemToCart } = props;
 
-  return <CardsGrid cart={cart} addItemToCart={addItemToCart}></CardsGrid>;
+  return (
+    <CardsGrid
+      cards={cards}
+      cart={cart}
+      addItemToCart={addItemToCart}
+    ></CardsGrid>
+  );
 }
 
 export default Shop;

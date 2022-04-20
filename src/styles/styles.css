@@ -83,7 +83,6 @@ a:active > .option {
 
 .addToCartButton {
   visibility: hidden;
-  font-family: "Material Icons";
   position: relative;
   top: 15px;
   left: 200px;
@@ -124,4 +123,56 @@ a:active > .option {
   color: black;
   display: flex;
   justify-content: space-around;
+}
+
+.cartItemContainer {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  height: 250px;
+  border: solid 1px black;
+}
+
+.cartItemUpperSide {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90%;
+  border: solid 1px green;
+}
+
+.cartImageContainer {
+  width: 80px;
+  height: 80px;
+}
+
+.cartCardImage {
+  width: 100%;
+  height: 100%;
+}
+
+.cartInputButtons {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.cartInputContainer {
+  width: 50px;
+  height: 50px;
+}
+
+.cartInput {
+  width: 40px;
+}
+
+.cartItemBottomSide {
+  width: 100%;
+  height: 10%;
+  border: solid 1px red;
+}
+
+.deleteItemButton {
+  width: 30px;
+  height: 30px;
 }
