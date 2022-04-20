@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import uniqid from "uniqid";
 
 const Card = (props) => {
-  const e = props.card;
+  const { e, cart, addItemToCart } = props;
+  let item = e;
 
   const manageAddItemToCart = () => {
-    let id = e.id;
-    let name = e.name;
-    let price = e.price;
-    let description = e.description;
+    let id = item.id;
+    let name = item.name;
+    let price = item.price;
+    let description = item.description;
 
-    let item = { id, name, price, description };
+    let newItem = { id, name, price, description };
+
+    addItemToCart(newItem);
   };
 
   return (
@@ -19,18 +22,25 @@ const Card = (props) => {
         <button className="addToCartButton" onClick={manageAddItemToCart}>
           add_shopping_cart
         </button>
-        <div className="imageContainer" id={e.id} key={e.id} name={e.name}>
+        <div
+          className="imageContainer"
+          id={item.id}
+          key={item.id}
+          name={item.name}
+        >
           <img
             className="cardImage"
             style={{ pointerEvents: "none" }} //Prevents img events to fire, thus not firing checkSelection
-            src={e.name}
-            alt={e.name}
+            src={item.name}
+            alt={item.name}
           ></img>
         </div>
       </div>
       <div className="cardBottomSide">
-        <div className="price">${new Intl.NumberFormat().format(e.price)}</div>
-        <div className="description">{e.description}</div>
+        <div className="price">
+          ${new Intl.NumberFormat().format(item.price)}
+        </div>
+        <div className="description">{item.description}</div>
       </div>
     </div>
   );

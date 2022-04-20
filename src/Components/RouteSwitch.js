@@ -5,11 +5,15 @@ import About from "./About";
 import Cart from "./Cart";
 
 // If was 'Routes' it will conflict with react router dom 'Routes' import => so 'routes'
-const routes = () => {
+const routes = (props) => {
+  const { cart, addItemToCart } = props;
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/shop" element={<Shop />} />
+      <Route
+        path="/shop"
+        element={<Shop cart={cart} addItemToCart={addItemToCart} />}
+      />
       <Route path="/about" element={<About />} />
       <Route path="/cart" element={<Cart />} />
     </Routes>

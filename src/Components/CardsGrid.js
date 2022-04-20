@@ -19,7 +19,9 @@ import stemk12 from "../images/stemk12.png";
 import tonybot from "../images/tonybot.png";
 import vacuum from "../images/vacuum.jpeg";
 
-const Cards = () => {
+const CardsGrid = (props) => {
+  const { cart, addItemToCart } = props;
+
   const [cards, setCards] = useState([
     {
       id: uniqid(),
@@ -121,11 +123,11 @@ const Cards = () => {
 
   return (
     <div className="cardsGrid">
-      {cards.map((e, index) => {
-        return <Card card={e}></Card>;
+      {cards.map((item, index) => {
+        return <Card e={item} cart={cart} addItemToCart={addItemToCart}></Card>;
       })}
     </div>
   );
 };
 
-export default Cards;
+export default CardsGrid;
