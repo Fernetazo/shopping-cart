@@ -2,24 +2,58 @@ import React, { useState, useEffect } from "react";
 import uniqid from "uniqid";
 
 const CartItem = (props) => {
-  const { item, cart, addItemToCart } = props;
+  const { item, cart, setCart, addItemToCart } = props;
 
-  const handleInputChange = () => {};
+  const handleInputChange = (e) => {
+    let newQuantity = parseInt(e.target.value);
+    let index = cart.findIndex((o) => {
+      return o.id === item.id;
+    });
+    let copyCart = cart;
 
-  const manageOneMoreItem = () => {
-    let id = item.id;
-    let name = item.name;
-    let price = item.price;
-    let description = item.description;
+    copyCart[index].quantity = newQuantity;
 
-    let newItem = { id, name, price, description };
-
-    addItemToCart(newItem);
+    setCart([...copyCart]);
   };
 
-  const manageOneLessItem = () => {};
+  const manageOneMoreItem = () => {
+    let copyCart = cart;
 
-  const manageDeleteItem = () => {};
+    let index = cart.findIndex((o) => {
+      return o.id === item.id;
+    });
+    let newQuantity = copyCart[index].quantity + 1;
+
+    // Same as: copyCart[index].quantity = newQuantity;
+    copyCart[index] = {
+      ...copyCart[index],
+      quantity: newQuantity,
+    };
+
+    setCart([...copyCart]);
+  };
+
+  const manageOneLessItem = () => {
+    let copyCart = cart;
+    let index = cart.findIndex((o) => {
+      return o.id === item.id;
+    });
+    let newQuantity = copyCart[index].quantity - 1;
+
+    if (newQuantity >= 1) {
+      copyCart[index].quantity = newQuantity;
+
+      setCart([...copyCart]);
+    }
+  };
+
+  const manageDeleteItem = () => {
+    let index = cart.findIndex((o) => {
+      return o.id === item.id;
+    });
+    let filteredCart = cart.filter((e, i) => i !== index);
+    setCart(filteredCart);
+  };
 
   return (
     <div className="cartItemContainer">
@@ -40,7 +74,7 @@ const CartItem = (props) => {
         <div className="cartItemMiddle">
           <div className="cartDescription">{item.description}</div>
           <div className="cartPrice">
-            ${new Intl.NumberFormat().format(item.price)}
+            Price per unit ${new Intl.NumberFormat().format(item.price)}
           </div>
         </div>
         <div className="cartInputButtons">
@@ -51,7 +85,11 @@ const CartItem = (props) => {
             add
           </button>
           <div className="cartInputContainer">
-            <input className="cartInput" onChange={handleInputChange}></input>
+            <input
+              className="cartInput"
+              value={item.quantity}
+              onChange={handleInputChange}
+            ></input>
           </div>
           <button
             className="oneLessItemButton material-icons"
@@ -60,7 +98,9 @@ const CartItem = (props) => {
             remove
           </button>
         </div>
-        <div>Subtotal TODO</div>
+        <div className="subtotalPrice">
+          ${new Intl.NumberFormat().format(item.price * item.quantity)}
+        </div>
       </div>
       <div className="cardBottomSide">
         <button

@@ -145,16 +145,25 @@ function App() {
       });
       let newQuantity = copyCart[index].quantity + 1;
 
-      copyCart[index].quantity = newQuantity;
+      // Same as: copyCart[index].quantity = newQuantity;
+      copyCart[index] = {
+        ...copyCart[index],
+        quantity: newQuantity,
+      };
 
-      setCart(copyCart);
+      setCart([...copyCart]);
     }
   };
 
   return (
     <div>
       <NavBar></NavBar>
-      <Routes cards={cards} cart={cart} addItemToCart={addItemToCart}></Routes>
+      <Routes
+        cards={cards}
+        cart={cart}
+        setCart={setCart}
+        addItemToCart={addItemToCart}
+      ></Routes>
       <BottomBar></BottomBar>
     </div>
   );

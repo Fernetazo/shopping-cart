@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import CartGrid from "./CartGrid";
 
 function Cart(props) {
-  const { cart, addItemToCart } = props;
+  const { cart, setCart, addItemToCart } = props;
 
-  return <CartGrid cart={cart} addItemToCart={addItemToCart}></CartGrid>;
+  return (
+    <CartGrid
+      cart={cart}
+      setCart={setCart}
+      addItemToCart={addItemToCart}
+    ></CartGrid>
+  );
 }
 
 export default Cart;

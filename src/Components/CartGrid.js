@@ -3,18 +3,20 @@ import uniqid from "uniqid";
 import CartItem from "./CartItem";
 
 const CartGrid = (props) => {
-  const { cart, addItemToCart } = props;
+  const { cart, setCart, addItemToCart } = props;
 
   // Filter duplicate items in cart
-  let filteredCart = [...new Map(cart.map((v) => [v.id, v])).values()];
+  //let filteredCart = [...new Map(cart.map((v) => [v.id, v])).values()];
 
   return (
     <div className="cartGrid">
-      {filteredCart.map((e, index) => {
+      {cart.map((e, index) => {
         return (
           <CartItem
+            key={index}
             item={e}
             cart={cart}
+            setCart={setCart}
             addItemToCart={addItemToCart}
           ></CartItem>
         );

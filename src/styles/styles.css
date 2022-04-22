@@ -151,6 +151,11 @@ a:active > .option {
   height: 100%;
 }
 
+.cartPrice {
+  color: grey;
+  font-size: 12px;
+}
+
 .cartInputButtons {
   display: flex;
   flex-direction: row;
@@ -164,6 +169,10 @@ a:active > .option {
 
 .cartInput {
   width: 40px;
+}
+
+.subtotalPrice {
+  font-size: 26px;
 }
 
 .cartItemBottomSide {
