@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import uniqid from "uniqid";
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
 
 const CartGrid = (props) => {
   const [totalAmount, setTotalAmount] = useState(0);
@@ -34,7 +35,12 @@ const CartGrid = (props) => {
       })}
       <div className="totalAmountContainer">
         <div className="totalAmountText">TOTAL AMOUNT:</div>
-        <div className="totalAmount">{totalAmount}</div>
+        <div className="totalAmount">
+          ${new Intl.NumberFormat().format(totalAmount)}
+        </div>
+        <Link to="/payment">
+          <button>Go to payment site</button>
+        </Link>
       </div>
     </div>
   );

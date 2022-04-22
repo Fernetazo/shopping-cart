@@ -159,7 +159,7 @@ function App() {
 
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar cart={cart}></NavBar>
       <Routes
         cards={cards}
         cart={cart}

@@ -5,14 +5,20 @@ const CartItem = (props) => {
   const { item, cart, setCart, addItemToCart } = props;
 
   const handleInputChange = (e) => {
+    // Can be improved to prevent user input to only be numbers (check each keystroke)
     let newQuantity = parseInt(e.target.value);
     let index = cart.findIndex((o) => {
       return o.id === item.id;
     });
+
+    if (newQuantity) {
+      newQuantity = parseInt(e.target.value);
+    } else {
+      newQuantity = 1;
+    }
+
     let copyCart = cart;
-
     copyCart[index].quantity = newQuantity;
-
     setCart([...copyCart]);
   };
 
@@ -89,6 +95,7 @@ const CartItem = (props) => {
               className="cartInput"
               value={item.quantity}
               onChange={handleInputChange}
+              type="number"
             ></input>
           </div>
           <button
