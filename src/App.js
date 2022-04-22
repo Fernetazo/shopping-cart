@@ -131,6 +131,8 @@ function App() {
     let description = e.description;
     let quantity = 1;
 
+    // Another option: Filter duplicate items in cart
+    // let filteredCart = [...new Map(cart.map((v) => [v.id, v])).values()];
     let checkDuplicate = cart.some((o) => {
       return o.id === id;
     });

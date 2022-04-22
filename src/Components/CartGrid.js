@@ -3,10 +3,21 @@ import uniqid from "uniqid";
 import CartItem from "./CartItem";
 
 const CartGrid = (props) => {
+  const [totalAmount, setTotalAmount] = useState(0);
+
   const { cart, setCart, addItemToCart } = props;
 
-  // Filter duplicate items in cart
-  //let filteredCart = [...new Map(cart.map((v) => [v.id, v])).values()];
+  const getTotalAmount = () => {
+    let tempTotalAmount = 0;
+    cart.forEach((e) => {
+      tempTotalAmount = e.price * e.quantity + tempTotalAmount;
+    });
+    setTotalAmount(tempTotalAmount);
+  };
+
+  useEffect(() => {
+    getTotalAmount();
+  }, [cart]);
 
   return (
     <div className="cartGrid">
@@ -21,6 +32,10 @@ const CartGrid = (props) => {
           ></CartItem>
         );
       })}
+      <div className="totalAmountContainer">
+        <div className="totalAmountText">TOTAL AMOUNT:</div>
+        <div className="totalAmount">{totalAmount}</div>
+      </div>
     </div>
   );
 };
