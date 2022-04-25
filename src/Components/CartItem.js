@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import uniqid from "uniqid";
+import React from "react";
 
 const CartItem = (props) => {
-  const { item, cart, setCart, addItemToCart } = props;
+  const { item, cart, setCart } = props;
 
   const handleInputChange = (e) => {
     // Can be improved to prevent user input to only be numbers (check each keystroke)

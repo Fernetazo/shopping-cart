@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import NavBar from "./Components/NavBar";
 import Routes from "./Components/RouteSwitch";
 import BottomBar from "./Components/BottomBar";
@@ -23,7 +23,7 @@ import tonybot from "./images/tonybot.png";
 import vacuum from "./images/vacuum.jpeg";
 
 function App() {
-  const [cards, setCards] = useState([
+  const [cards] = useState([
     {
       id: uniqid(),
       name: alphamini,

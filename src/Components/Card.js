@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import uniqid from "uniqid";
 
 const Card = (props) => {
-  const { e, cart, addItemToCart } = props;
+  const { e, addItemToCart } = props;
   let item = e;
 
   const manageAddItemToCart = (e) => {
@@ -18,7 +17,7 @@ const Card = (props) => {
     addItemToCart(newItem);
   };
   return (
-    <Link to={item.id} className="cardContainer">
+    <Link to={item.id} state={item} className="cardContainer">
       <button
         className="addToCartButton material-icons"
         onClick={manageAddItemToCart}

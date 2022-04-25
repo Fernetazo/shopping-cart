@@ -4,6 +4,7 @@ import Shop from "./Shop";
 import About from "./About";
 import Cart from "./Cart";
 import Payment from "./Payment";
+import ShopItem from "./ShopItem";
 
 // If was 'Routes' it will conflict with react router dom 'Routes' import => so 'routes'
 const routes = (props) => {
@@ -35,6 +36,10 @@ const routes = (props) => {
         }
       />
       <Route path="/payment" element={<Payment />} />
+      <Route
+        path="/shop/*"
+        element={<ShopItem addItemToCart={addItemToCart} />}
+      />
     </Routes>
   );
 };
