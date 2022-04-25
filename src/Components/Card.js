@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import uniqid from "uniqid";
 
 const Card = (props) => {
   const { e, cart, addItemToCart } = props;
   let item = e;
 
-  const manageAddItemToCart = () => {
+  const manageAddItemToCart = (e) => {
+    e.preventDefault();
     let id = item.id;
     let name = item.name;
     let price = item.price;
@@ -15,16 +17,15 @@ const Card = (props) => {
 
     addItemToCart(newItem);
   };
-
   return (
-    <div className="cardContainer">
+    <Link to={item.id} className="cardContainer">
+      <button
+        className="addToCartButton material-icons"
+        onClick={manageAddItemToCart}
+      >
+        add_shopping_cart
+      </button>
       <div className="cardUpperSide">
-        <button
-          className="addToCartButton material-icons"
-          onClick={manageAddItemToCart}
-        >
-          add_shopping_cart
-        </button>
         <div
           className="imageContainer"
           id={item.id}
@@ -45,7 +46,7 @@ const Card = (props) => {
         </div>
         <div className="description">{item.description}</div>
       </div>
-    </div>
+    </Link>
   );
 };
 

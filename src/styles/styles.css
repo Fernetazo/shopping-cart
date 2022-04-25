@@ -2,6 +2,11 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .material-icons {
   font-family: "Material Icons";
 }
@@ -26,23 +31,23 @@ body {
   justify-content: space-around;
 }
 
-a {
+.option {
   background-color: rgb(220, 220, 220);
   color: black;
 }
-a:hover {
+.option:hover {
   background-color: #194872;
 }
-a:hover > .option {
+.option:hover > .option {
   color: white;
 }
-a:visited {
+.option:visited {
   color: black;
 }
-a:active {
+.option:active {
   background-color: white;
 }
-a:active > .option {
+.option:active > .option {
   background-color: white;
   color: black;
 }
@@ -74,7 +79,6 @@ a:active > .option {
 .cardContainer {
   display: flex;
   flex-direction: column;
-  gap: 25px;
   width: 245px;
   height: 445px;
   box-shadow: 2px 1px 1px gray;
@@ -91,15 +95,17 @@ a:active > .option {
   visibility: visible;
 }
 
-.cardUpperSide {
-  border-bottom: solid 0.25px grey;
-}
-
 .addToCartButton {
   visibility: hidden;
   position: relative;
+  width: 40px;
+  height: 40px;
   top: 15px;
-  left: 200px;
+  left: 190px;
+}
+
+.cardUpperSide {
+  border-bottom: solid 0.25px grey;
 }
 
 .imageContainer {
@@ -130,13 +136,6 @@ a:active > .option {
   font-size: 13px;
   margin-left: 20px;
   margin-right: 20px;
-}
-
-.bottomBar {
-  background-color: rgb(220, 220, 220);
-  color: black;
-  display: flex;
-  justify-content: space-around;
 }
 
 .cartItemContainer {
@@ -198,4 +197,11 @@ a:active > .option {
 .deleteItemButton {
   width: 30px;
   height: 30px;
+}
+
+.bottomBar {
+  background-color: rgb(220, 220, 220);
+  color: black;
+  display: flex;
+  justify-content: space-around;
 }
