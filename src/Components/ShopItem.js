@@ -11,6 +11,8 @@ function ShopItem(props) {
     navigate(-1);
   };
 
+  // TO DO: Zoom img when hovering it
+
   return (
     <div className="shopItemContainer">
       <div className="shopItemUpperSide" onClick={goToBack}>

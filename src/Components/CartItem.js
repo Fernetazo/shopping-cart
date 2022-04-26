@@ -105,10 +105,10 @@ const CartItem = (props) => {
           </button>
         </div>
         <div className="subtotalPrice">
-          ${new Intl.NumberFormat().format(item.price * item.quantity)}
+          $ {new Intl.NumberFormat().format(item.price * item.quantity)}
         </div>
       </div>
-      <div className="cardBottomSide">
+      <div className="cartItemBottomSide">
         <button
           className="deleteItemButton material-icons"
           onClick={manageDeleteItem}

@@ -21,6 +21,7 @@ const Card = (props) => {
       <button
         className="addToCartButton material-icons"
         onClick={manageAddItemToCart}
+        title="Add to cart"
       >
         add_shopping_cart
       </button>
@@ -41,7 +42,7 @@ const Card = (props) => {
       </div>
       <div className="cardBottomSide">
         <div className="price">
-          ${new Intl.NumberFormat().format(item.price)}
+          $ {new Intl.NumberFormat().format(item.price)}
         </div>
         <div className="description">{item.description}</div>
       </div>

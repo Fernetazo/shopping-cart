@@ -9,12 +9,14 @@ function BottomBar() {
 
   return (
     <div className="bottomBar">
-      <div className="sign">Web design by Fernetazo</div>
-      <div className="option">About</div>
-      <div className="option">FAQ</div>
-      <div className="option">Contact</div>
-      <div className="material-icons" onClick={scrollToTop}>
-        arrow_upward
+      <div className="bottomBarOptions">
+        <div className="option sign">Web design by Fernetazo</div>
+        <div className="option">ABOUT</div>
+        <div className="option">FAQ</div>
+        <div className="option">CONTACT</div>
+        <div className="option material-icons" onClick={scrollToTop}>
+          arrow_upward
+        </div>
       </div>
     </div>
   );

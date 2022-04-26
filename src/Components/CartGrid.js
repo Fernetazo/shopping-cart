@@ -34,14 +34,14 @@ const CartGrid = (props) => {
         );
       })}
       <div className="totalAmountContainer">
-        <div className="totalAmountText">TOTAL AMOUNT:</div>
+        <div className="totalAmountText">Total amount:</div>
         <div className="totalAmount">
-          ${new Intl.NumberFormat().format(totalAmount)}
+          $ {new Intl.NumberFormat().format(totalAmount)}
         </div>
-        <Link to="/payment">
-          <button>Go to payment site</button>
-        </Link>
       </div>
+      <Link to="/payment" className="paymentContainer">
+        <button className="paymentButton">Go to payment site</button>
+      </Link>
     </div>
   );
 };

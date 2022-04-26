@@ -160,12 +160,14 @@ function App() {
   return (
     <div>
       <NavBar cart={cart}></NavBar>
-      <Routes
-        cards={cards}
-        cart={cart}
-        setCart={setCart}
-        addItemToCart={addItemToCart}
-      ></Routes>
+      <div className="mainDisplay">
+        <Routes
+          cards={cards}
+          cart={cart}
+          setCart={setCart}
+          addItemToCart={addItemToCart}
+        ></Routes>
+      </div>
       <BottomBar></BottomBar>
     </div>
   );

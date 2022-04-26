@@ -28,18 +28,18 @@ function NavBar(props) {
 
   return (
     <div className="navBar">
-      <div className="mainTitle">Androidz</div>
+      <div className="mainTitle">THE ANDROIDZ SHOP</div>
       <div className="navigationOptions">
-        <Link to="/">
-          <div className="option">Home</div>
+        <Link to="/" className="option">
+          <div>HOME</div>
         </Link>
-        <Link to="/shop">
-          <div className="option">Shop</div>
+        <Link to="/shop" className="option">
+          <div>SHOP</div>
         </Link>
-        <Link to="/about">
-          <div className="option">About</div>
+        <Link to="/about" className="option">
+          <div>ABOUT</div>
         </Link>
-        <Link to="/cart">
+        <Link to="/cart" className="option">
           <div className="option material-icons">shopping_cart</div>
         </Link>
         <div className={classCartIndicator}>{cartIndicator}</div>
