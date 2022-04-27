@@ -82,26 +82,24 @@ const CartItem = (props) => {
             Price per unit ${new Intl.NumberFormat().format(item.price)}
           </div>
         </div>
-        <div className="cartInputButtons">
-          <button
-            className="oneMoreItemButton material-icons"
-            onClick={manageOneMoreItem}
-          >
-            add
-          </button>
-          <div className="cartInputContainer">
-            <input
-              className="cartInput"
-              value={item.quantity}
-              onChange={handleInputChange}
-              type="number"
-            ></input>
-          </div>
+        <div className="cartInputButtonsContainer">
           <button
             className="oneLessItemButton material-icons"
             onClick={manageOneLessItem}
           >
             remove
+          </button>
+          <input
+            className="cartInput"
+            value={item.quantity}
+            onChange={handleInputChange}
+            type="number"
+          ></input>
+          <button
+            className="oneMoreItemButton material-icons"
+            onClick={manageOneMoreItem}
+          >
+            add
           </button>
         </div>
         <div className="subtotalPrice">
@@ -109,13 +107,9 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className="cartItemBottomSide">
-        <button
-          className="deleteItemButton material-icons"
-          onClick={manageDeleteItem}
-        >
-          delete
-        </button>
-        Remove
+        <div className="deleteItemButton" onClick={manageDeleteItem}>
+          Remove
+        </div>
       </div>
     </div>
   );
