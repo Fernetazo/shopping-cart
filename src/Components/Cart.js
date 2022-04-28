@@ -11,7 +11,9 @@ function Cart(props) {
       addItemToCart={addItemToCart}
     ></CartGrid>
   ) : (
-    <div>Your shopping cart is empty! Go shop around!</div>
+    <div className="gotoShopMessage">
+      Your shopping cart is empty! Go shop around!
+    </div>
   );
 }
 

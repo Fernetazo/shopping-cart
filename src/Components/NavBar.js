@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function NavBar(props) {
   const { cart } = props;
@@ -26,9 +26,19 @@ function NavBar(props) {
       : setClassCartIndicator("cartIndicatorHidden");
   }, [cart]);
 
+  let navigate = useNavigate();
+  const goToCart = () => {
+    navigate("/cart");
+  };
+  const goToHome = () => {
+    navigate("/");
+  };
+
   return (
     <div className="navBar">
-      <div className="mainTitle">THE ANDROIDZ SHOP</div>
+      <div className="mainTitle" onClick={goToHome}>
+        THE ANDROIDZ SHOP
+      </div>
       <div className="navigationOptions">
         <Link to="/" className="option">
           <div>HOME</div>
@@ -39,10 +49,12 @@ function NavBar(props) {
         <Link to="/about" className="option">
           <div>ABOUT</div>
         </Link>
-        <Link to="/cart" className="option">
-          <div className="option material-icons">shopping_cart</div>
+        <Link to="/cart" className="option cart">
+          <div className="option cart material-icons">shopping_cart</div>
+          <div onClick={goToCart} className={classCartIndicator}>
+            {cartIndicator}
+          </div>
         </Link>
-        <div className={classCartIndicator}>{cartIndicator}</div>
       </div>
     </div>
   );

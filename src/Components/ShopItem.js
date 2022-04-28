@@ -16,8 +16,10 @@ function ShopItem(props) {
   return (
     <div className="shopItemContainer">
       <div className="shopItemUpperSide" onClick={goToBack}>
-        <div className="shopItemBackButton material-icons">arrow_back</div>
-        <div className="shopItemBackButtonDescription">Back to list</div>
+        <div className="shopItemUpperSideButtons">
+          <div className="shopItemBackButton material-icons">arrow_back</div>
+          <div className="shopItemBackButtonDescription">Back to list</div>
+        </div>
       </div>
       <div className="shopItemMain">
         <div className="shopItemImageContainer" id={item.id} name={item.name}>
@@ -26,10 +28,10 @@ function ShopItem(props) {
         <div className="shopItemRightSide">
           <div className="shopItemDescription">{item.description}</div>
           <div className="shopItemPrice">
-            ${new Intl.NumberFormat().format(item.price)}
+            $ {new Intl.NumberFormat().format(item.price)}
           </div>
           <button
-            className="shopItemAddToCartButton"
+            className="blueButton"
             onClick={() => {
               addItemToCart(item);
             }}

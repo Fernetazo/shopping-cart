@@ -5,6 +5,8 @@ import About from "./About";
 import Cart from "./Cart";
 import Payment from "./Payment";
 import ShopItem from "./ShopItem";
+import FAQ from "./FAQ";
+import Contact from "./Contact";
 
 // If was 'Routes' it will conflict with react router dom 'Routes' import => so 'routes'
 const routes = (props) => {
@@ -40,6 +42,8 @@ const routes = (props) => {
         path="/shop/*"
         element={<ShopItem addItemToCart={addItemToCart} />}
       />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const CartItem = (props) => {
   const { item, cart, setCart } = props;
@@ -60,6 +61,11 @@ const CartItem = (props) => {
     setCart(filteredCart);
   };
 
+  let navigate = useNavigate();
+  const goToItemPage = () => {
+    navigate("/shop/" + item.id, { state: item });
+  };
+
   return (
     <div className="cartItemContainer">
       <div className="cartItemUpperSide">
@@ -68,6 +74,7 @@ const CartItem = (props) => {
           id={item.id}
           key={item.id}
           name={item.name}
+          onClick={goToItemPage}
         >
           <img
             className="cartCardImage"
@@ -76,7 +83,7 @@ const CartItem = (props) => {
             alt={item.name}
           ></img>
         </div>
-        <div className="cartItemMiddle">
+        <div className="cartItemMiddle" onClick={goToItemPage}>
           <div className="cartDescription">{item.description}</div>
           <div className="cartPrice">
             Price per unit ${new Intl.NumberFormat().format(item.price)}

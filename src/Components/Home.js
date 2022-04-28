@@ -11,9 +11,11 @@ function Home() {
   */
   return (
     <div className="home">
-      <div>Here you can buy the most modern Androidz.</div>
+      <div className="speech">
+        Welcome! Here you can buy the most modern Androidz
+      </div>
       <Link to="shop">
-        <button>Start shopping!</button>
+        <button className="blueButton">Start shopping!</button>
       </Link>
     </div>
   );
