@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.7b4188c4.css",
+    "main.js": "/shopping-cart/static/js/main.192e3a2c.js",
+    "static/media/jedi.png": "/shopping-cart/static/media/jedi.01c498d39be71416a5a4.png",
+    "static/media/padbotx1s.png": "/shopping-cart/static/media/padbotx1s.dcb95035199fb3efdca2.png",
+    "static/media/tonybot.png": "/shopping-cart/static/media/tonybot.03b6970a8aed1cf3f79b.png",
+    "static/media/if3129.png": "/shopping-cart/static/media/if3129.52905aa914c82bb74f45.png",
+    "static/media/stemk12.png": "/shopping-cart/static/media/stemk12.d845cecaddb97d500457.png",
+    "static/media/pepper.png": "/shopping-cart/static/media/pepper.0da7bcd5a4ff852a42ec.png",
+    "static/media/go1.jpg": "/shopping-cart/static/media/go1.2fc21ac2918f6c5220b5.jpg",
+    "static/media/drawer.jpg": "/shopping-cart/static/media/drawer.40229f5375067f7819ab.jpg",
+    "static/media/cleaner.jpg": "/shopping-cart/static/media/cleaner.62d6ec5cce78b85226b7.jpg",
+    "static/media/alphamini.jpg": "/shopping-cart/static/media/alphamini.a03cae1f9554326ca6b2.jpg",
+    "static/media/deli.jpg": "/shopping-cart/static/media/deli.14e652bf6ada5766e2f2.jpg",
+    "static/media/spider.jpg": "/shopping-cart/static/media/spider.65b2cb0942770d1e37b1.jpg",
+    "static/media/iCiel-Thin.woff": "/shopping-cart/static/media/iCiel-Thin.ef33d53ec2569f0b7361.woff",
+    "static/media/reeman.jpg": "/shopping-cart/static/media/reeman.bd80c15785eb5d6d12ac.jpg",
+    "static/media/cate.jpg": "/shopping-cart/static/media/cate.a214e334df3794839443.jpg",
+    "static/media/iCiel-Thin.woff2": "/shopping-cart/static/media/iCiel-Thin.7d858d42200e4597b161.woff2",
+    "static/media/cyx5.jpg": "/shopping-cart/static/media/cyx5.ddb7ca0249dcf302d7c7.jpg",
+    "static/media/vacuum.jpeg": "/shopping-cart/static/media/vacuum.f42b270a33eb1e2919d2.jpeg",
+    "static/media/HomepageBaukasten-Book.woff": "/shopping-cart/static/media/HomepageBaukasten-Book.6cd5e5043072b383c9d9.woff",
+    "static/media/HomepageBaukasten-Book.woff2": "/shopping-cart/static/media/HomepageBaukasten-Book.1b4a8e41922cba4c5340.woff2",
+    "index.html": "/shopping-cart/index.html",
+    "main.7b4188c4.css.map": "/shopping-cart/static/css/main.7b4188c4.css.map",
+    "main.192e3a2c.js.map": "/shopping-cart/static/js/main.192e3a2c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b4188c4.css",
+    "static/js/main.192e3a2c.js"
+  ]
+}
