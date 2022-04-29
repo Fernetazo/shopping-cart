@@ -28,10 +28,10 @@ function NavBar(props) {
 
   let navigate = useNavigate();
   const goToCart = () => {
-    navigate("/cart");
+    navigate("/shopping-cart/cart");
   };
   const goToHome = () => {
-    navigate("/");
+    navigate("/shopping-cart/");
   };
 
   return (
@@ -40,16 +40,16 @@ function NavBar(props) {
         THE ANDROIDZ SHOP
       </div>
       <div className="navigationOptions">
-        <Link to="/" className="option">
+        <Link to="/shopping-cart/" className="option">
           <div>HOME</div>
         </Link>
-        <Link to="/shop" className="option">
+        <Link to="/shopping-cart/shop" className="option">
           <div>SHOP</div>
         </Link>
-        <Link to="/about" className="option">
+        <Link to="/shopping-cart/about" className="option">
           <div>ABOUT</div>
         </Link>
-        <Link to="/cart" className="option cart">
+        <Link to="/shopping-cart/cart" className="option cart">
           <div className="option cart material-icons">shopping_cart</div>
           <div onClick={goToCart} className={classCartIndicator}>
             {cartIndicator}

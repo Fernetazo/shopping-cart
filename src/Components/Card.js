@@ -17,7 +17,11 @@ const Card = (props) => {
     addItemToCart(newItem);
   };
   return (
-    <Link to={item.id} state={item} className="cardContainer">
+    <Link
+      to={"/shopping-cart/shop/" + item.id}
+      state={item}
+      className="cardContainer"
+    >
       <button
         className="addToCartButton material-icons"
         onClick={manageAddItemToCart}

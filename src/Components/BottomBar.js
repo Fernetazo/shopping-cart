@@ -11,13 +11,13 @@ function BottomBar() {
 
   const navigate = useNavigate();
   const goToAbout = () => {
-    navigate("/about");
+    navigate("/shopping-cart/about");
   };
   const goToFAQ = () => {
-    navigate("/faq");
+    navigate("/shopping-cart/faq");
   };
   const goToContact = () => {
-    navigate("/contact");
+    navigate("/shopping-cart/contact");
   };
   const goToGithub = () => {
     window.open("https://github.com/Fernetazo");

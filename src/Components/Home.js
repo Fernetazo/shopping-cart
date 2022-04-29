@@ -14,7 +14,7 @@ function Home() {
       <div className="speech">
         Welcome! Here you can buy the most modern Androidz
       </div>
-      <Link to="shop">
+      <Link to="/shopping-cart/shop">
         <button className="blueButton">Start shopping!</button>
       </Link>
     </div>

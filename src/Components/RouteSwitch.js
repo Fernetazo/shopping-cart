@@ -13,9 +13,9 @@ const routes = (props) => {
   const { cards, cart, setCart, addItemToCart } = props;
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/shopping-cart/" element={<Home />} />
       <Route
-        path="/shop"
+        path="/shopping-cart/shop"
         element={
           <Shop
             cards={cards}
@@ -25,9 +25,9 @@ const routes = (props) => {
           />
         }
       />
-      <Route path="/about" element={<About />} />
+      <Route path="/shopping-cart/about" element={<About />} />
       <Route
-        path="/cart"
+        path="/shopping-cart/cart"
         element={
           <Cart
             cards={cards}
@@ -37,13 +37,13 @@ const routes = (props) => {
           />
         }
       />
-      <Route path="/payment" element={<Payment />} />
+      <Route path="/shopping-cart/payment" element={<Payment />} />
       <Route
-        path="/shop/*"
+        path="/shopping-cart/shop/*"
         element={<ShopItem addItemToCart={addItemToCart} />}
       />
-      <Route path="/faq" element={<FAQ />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/shopping-cart/faq" element={<FAQ />} />
+      <Route path="/shopping-cart/contact" element={<Contact />} />
     </Routes>
   );
 };

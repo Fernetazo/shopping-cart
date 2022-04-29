@@ -39,7 +39,7 @@ const CartGrid = (props) => {
         </div>
       </div>
       <div className="paymentContainer">
-        <Link to="/payment">
+        <Link to="/shopping-cart/payment">
           <div className="paymentButton">Go to payment site</div>
         </Link>
       </div>

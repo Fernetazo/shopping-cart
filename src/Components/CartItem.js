@@ -63,7 +63,7 @@ const CartItem = (props) => {
 
   let navigate = useNavigate();
   const goToItemPage = () => {
-    navigate("/shop/" + item.id, { state: item });
+    navigate("/shopping-cart/shop/" + item.id, { state: item });
   };
 
   return (
